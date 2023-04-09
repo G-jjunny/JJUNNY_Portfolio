@@ -9,15 +9,16 @@ import InfoTheme from "../components/InfoTheme";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { IconButton } from "@mui/material";
+import TechStack from "../components/TechStack";
 
 const InfoContainer = styled.div`
   position: relative;
   width: 70vw;
-  max-width: 800px;
+  max-width: 850px;
   min-height: 600px;
   margin: auto;
   background-color: var(--main-white);
-  padding: 0 100px;
+  padding: 0 50px;
   transition: 1s;
   opacity: ${({ isSecond }) => (isSecond ? "1" : "0")};
 
@@ -199,9 +200,10 @@ export default function Info() {
         <Row>
           <Education isToggle={isToggle} />
           <Activity isToggle={isToggle} />
-          <div className="stack">
+          <TechStack isToggle={isToggle} />
+          {/* <div className="stack">
             <IconButton onClick={onClick}>button</IconButton>
-          </div>
+          </div> */}
         </Row>
       </div>
     </InfoContainer>

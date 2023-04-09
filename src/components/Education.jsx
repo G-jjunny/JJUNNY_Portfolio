@@ -5,7 +5,7 @@ import Col from "./Col";
 
 const Edu = styled.div`
   overflow: hidden;
-  margin-right: 50px;
+  margin-right: 40px;
   transition: 1s;
 
   /* opacity: ${({ isToggle }) => (isToggle ? "0" : "1")}; */

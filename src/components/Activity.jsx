@@ -5,6 +5,7 @@ import Col from "./Col";
 
 const Act = styled.div`
   max-width: 300px;
+  margin-right: 40px;
   .head {
     /* font-size: 24px; */
     font-weight: 700;
