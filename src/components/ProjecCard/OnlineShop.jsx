@@ -13,7 +13,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import MusicWeb from "../../images/musicplayer_main.png";
+import OnlineShopping from "../../images/onlineshop.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkIcon from "@mui/icons-material/Link";
 import Profile from "../../images/profile.jpg";
@@ -70,7 +70,7 @@ const StyledCardHeader = styled(CardHeader)`
   }
 `;
 
-function MusicPlayerCard({ isActive, id }) {
+function OnlineShop({ isActive, id }) {
   const [expanded, setExpanded] = React.useState(false);
   const animate = useSelector((state) => state.animate);
   const [isActiveBadge, setIsActiveBadge] = useState(false);
@@ -135,22 +135,19 @@ function MusicPlayerCard({ isActive, id }) {
       <CardMedia
         component="img"
         height={`${expanded ? "130px" : "230px"}`}
-        image={MusicWeb}
+        image={OnlineShopping}
         alt="Music"
       />
       <CardContent sx={{ padding: "8px 24px 0 24px" }}>
         <Typography variant="body2" color="text.primary">
-          musicPlayer프로젝트 입니다. Redux를 사용하여 음원 관련 스토어를
-          생성하여 프로젝트를 제작하였으며 프로젝트에 사용된 이미지와 음원은
-          pixabay의 무료 이미지와 음원을 사용했습니다. store/data에 등록되어있는
-          데이터에서 name, artist, img, src, id를 받아 해당 곡의 배경 및 정보를
-          보여주고 플레이 리스트 수정 및 재생을 할 수 있는 기능을 구현했습니다.
+          Redux를 학습하면서 제작한 쇼핑몰 장바구니 기능을 구현한 웹 페이지
+          입니다.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton
           aria-label="Github"
-          href="https://github.com/G-jjunny/music-player"
+          href="https://github.com/G-jjunny/jjunny-shop"
           target="_BLANK"
         >
           <GitHubIcon />
@@ -217,7 +214,7 @@ function MusicPlayerCard({ isActive, id }) {
           </BadgeRow>
           <BadgeRow>
             <img
-              src="https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white"
+              src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"
               alt="sass"
             />
             <img
@@ -225,11 +222,10 @@ function MusicPlayerCard({ isActive, id }) {
               alt="mui"
             />
           </BadgeRow>
-          {/* </Typography> */}
         </CardContent>
       </Collapse>
     </Card>
   );
 }
 
-export default MusicPlayerCard;
+export default OnlineShop;

@@ -48,8 +48,8 @@ function Education({ isToggle }) {
       isToggle={isToggle}
       className={`${
         isSecond
-          ? "animate__animated animate__zoomInUp"
-          : "animate__animated animate__zoomOutDown"
+          ? "animate__animated animate__fadeInDown"
+          : "animate__animated animate__fadeOut"
       }`}
     >
       <Col>

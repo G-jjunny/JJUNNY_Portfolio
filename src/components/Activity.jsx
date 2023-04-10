@@ -41,8 +41,8 @@ function Activity() {
       <div
         className={`${
           isSecond
-            ? "animate__animated animate__zoomInUp"
-            : "animate__animated animate__zoomOutDown"
+            ? "animate__animated animate__fadeInDown fadeindown-delay-1"
+            : "animate__animated animate__fadeOut"
         }`}
       >
         <Col>

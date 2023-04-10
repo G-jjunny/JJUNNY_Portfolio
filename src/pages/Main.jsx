@@ -9,6 +9,7 @@ const Intro = styled.div`
   color: var(--main-white);
   width: 100%;
   margin: auto 40px;
+  z-index: 1;
   .text {
     text-align: center;
     position: relative;

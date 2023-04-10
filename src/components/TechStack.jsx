@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import BadgeRow from "./BadgeRow";
+import { useSelector } from "react-redux";
 
 const StyledDiv = styled.div`
   .head {
@@ -10,8 +11,24 @@ const StyledDiv = styled.div`
 `;
 
 function TechStack() {
+  const [isSecond, setIsSecond] = useState(false);
+  const animate = useSelector((state) => state.animate);
+
+  useEffect(() => {
+    if (animate === "second") {
+      setIsSecond(true);
+    } else {
+      setIsSecond(false);
+    }
+  }, [animate]);
   return (
-    <StyledDiv>
+    <StyledDiv
+      className={`${
+        isSecond
+          ? "animate__animated animate__fadeInDown animate__delay-1s"
+          : "animate__animated animate__fadeOut"
+      }`}
+    >
       <h3 className="head">기술스택</h3>
       <BadgeRow>
         <img

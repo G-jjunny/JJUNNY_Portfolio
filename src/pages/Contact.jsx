@@ -1,27 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import { useSelector } from "react-redux";
 
 const StyledDiv = styled.div`
   width: 100%;
   padding: 150px 100px;
   color: var(--main-white);
+  transition: 1s;
+  opacity: ${({ isLast }) => (isLast ? "1" : "0")};
   .outTro {
+    position: relative;
     max-width: 650px;
     margin-bottom: 50px;
     p {
       margin-bottom: 20px;
-      font-weight: 600;
+      font-weight: 400;
     }
+    .bold {
+      font-weight: 600;
+      color: var(--bright);
+    }
+  }
+  .outTro::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-color: var(--main-white);
+    position: absolute;
+    right: 0;
   }
   .contact {
     .icon-group {
       align-items: center;
       color: var(--main-white);
       margin: 20px 0;
+      display: flex;
+
       button {
         background-color: inherit;
         border: 0;
@@ -39,7 +58,10 @@ const StyledDiv = styled.div`
         /* background-color: var(--secondary); */
         color: var(--secondary);
         transition: 0.5s;
-        animation: shake 0.25s;
+        .icon {
+          animation: shake 0.25s;
+          color: var(--bright);
+        }
       }
     }
   }
@@ -60,10 +82,23 @@ const StyledDiv = styled.div`
 `;
 
 function Contact() {
+  const [isLast, setIsLast] = useState(false);
+  const animate = useSelector((state) => state.animate);
+  useEffect(() => {
+    if (animate === "last") {
+      setIsLast(true);
+    } else {
+      setIsLast(false);
+    }
+  }, [animate]);
+
   return (
-    <StyledDiv>
+    <StyledDiv isLast={isLast}>
       <div className="outTro">
-        <p>안녕하세요 주니어프론트엔드 개발자 정경준입니다!</p>
+        <p>
+          안녕하세요 주니어프론트엔드 개발자{" "}
+          <span className="bold">정경준</span>입니다!
+        </p>
         <p>
           저는 학습한 기술을 바탕으로 더욱 전문성을 키워 새로운 기술과 트렌드에
           대한 열린 마음으로 접근하며 프론트엔드 분야에서 전문적인 역량을 갖출

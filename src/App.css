@@ -8,6 +8,28 @@
   --bright: #85a2ad;
   --main-white: #eaeff1;
 }
+
+.fadeindown-delay-0 {
+  animation-name: fadeindown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
+.fadeindown-delay-1 {
+  animation-name: fadeindown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+.fadeindown-delay-2 {
+  animation-name: fadeindown;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+
 body {
   -ms-overflow-style: none;
   /* font-family: "Noto Sans KR", sans-serif; */

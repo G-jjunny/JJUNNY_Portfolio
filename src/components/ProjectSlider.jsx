@@ -8,6 +8,7 @@ import SinkwangCard from "./ProjecCard/SmuMemoryCard";
 import SmuMemoryCard from "./ProjecCard/SmuMemoryCard";
 import StarbucksCard from "./ProjecCard/StarbucksCard";
 import MusicPlayerCard from "./ProjecCard/MusicPlayerCard";
+import OnlineShop from "./ProjecCard/OnlineShop";
 
 const SlideContainer = styled.div`
   /* overflow: hidden; */
@@ -57,7 +58,7 @@ export default class ProjectSlider extends Component {
       dots: false,
       arrows: false,
       slidesToScroll: 1,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 3000,
       centerMode: true,
       className: "center",
@@ -104,6 +105,9 @@ export default class ProjectSlider extends Component {
           </div>
           <div>
             <MusicPlayerCard isActive={this.state.activeSlide} id={3} />
+          </div>
+          <div>
+            <OnlineShop isActive={this.state.activeSlide} id={4} />
           </div>
         </StyledSlider>
       </SlideContainer>

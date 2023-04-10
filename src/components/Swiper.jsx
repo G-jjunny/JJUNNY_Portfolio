@@ -30,6 +30,7 @@ const SectionWipesStyled = styled.div`
   .panel.contact {
     display: flex;
     margin-bottom: 300px;
+    background-color: var(--main-color);
   }
 `;
 

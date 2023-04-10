@@ -10,8 +10,10 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { IconButton } from "@mui/material";
 import TechStack from "../components/TechStack";
+import TypingAnimation from "../hooks/TypingAnimation";
 
 const InfoContainer = styled.div`
+  z-index: 2;
   position: relative;
   width: 70vw;
   max-width: 850px;
@@ -183,9 +185,26 @@ export default function Info() {
           <div className="t-group">
             <h3>주니어 프론트엔드 개발자</h3>
             <h3>
-              <span className="bold">정경준</span> 입니다.
+              <span
+                className={`${
+                  isSecond
+                    ? "bold animate__animated animate__flash animate__slower"
+                    : "bold"
+                }`}
+              >
+                정경준
+              </span>{" "}
+              입니다.
             </h3>
-            <h2>JUNG GYEONG JUN</h2>
+            <h2
+              className={`${
+                isSecond
+                  ? "animate__animated animate__flash animate__slower"
+                  : ""
+              }`}
+            >
+              JUNG GYEONG JUN
+            </h2>
             <p className="introduction">
               언제나 새롭고 부족한 부분에 있어서 배우는데 열정을 가지고 하루하루
               성장하며
