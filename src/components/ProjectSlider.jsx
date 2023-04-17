@@ -44,6 +44,12 @@ const StyledSlider = styled(Slider)`
   .styled-div {
     display: flex;
   }
+
+  @media screen and (max-width: 1200px) {
+    .slick-slide.slick-center {
+      /* min-width: 400px; */
+    }
+  }
 `;
 
 export default class ProjectSlider extends Component {
@@ -58,7 +64,7 @@ export default class ProjectSlider extends Component {
       dots: false,
       arrows: false,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 3000,
       centerMode: true,
       className: "center",

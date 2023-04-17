@@ -57,16 +57,24 @@ const Bg = styled.div`
 
   @media screen and (max-width: 768px) {
     .top {
-      top: 10px;
-      right: 10px;
+      top: 15px;
+      right: 15px;
     }
     .right {
       font-size: 18px;
-      margin: 10px -8px;
+      margin: -12px -30px;
     }
     .bottom {
-      left: 10px;
-      bottom: 10px;
+      left: 15px;
+      bottom: 15px;
+    }
+    .left {
+      bottom: 15px;
+      left: 15px;
+    }
+    .top::after,
+    .bottom::after {
+      width: 70vw;
     }
   }
 `;

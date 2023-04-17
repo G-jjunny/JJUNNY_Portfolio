@@ -68,3 +68,9 @@ p {
     font-size: 14px;
   }
 }
+
+@media screen and(max-width : 365px) {
+  p {
+    font-size: 12px;
+  }
+}

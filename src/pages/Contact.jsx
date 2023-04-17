@@ -65,6 +65,22 @@ const StyledDiv = styled.div`
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    padding: 100px 50px;
+  }
+  @media screen and (max-width: 365px) {
+    padding: 50px 50px;
+    .outTro {
+      p {
+        margin-bottom: 14px;
+      }
+    }
+    .contact {
+      .icon-group {
+        margin: 14px 0;
+      }
+    }
+  }
   @keyframes shake {
     10% {
       transform: rotate(15deg);
@@ -96,7 +112,7 @@ function Contact() {
     <StyledDiv isLast={isLast}>
       <div className="outTro">
         <p>
-          안녕하세요 주니어프론트엔드 개발자{" "}
+          안녕하세요 주니어 프론트엔드 개발자{" "}
           <span className="bold">정경준</span>입니다!
         </p>
         <p>

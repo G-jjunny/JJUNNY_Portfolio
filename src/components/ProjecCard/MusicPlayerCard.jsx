@@ -134,11 +134,13 @@ function MusicPlayerCard({ isActive, id }) {
       />
       <CardMedia
         component="img"
-        height={`${expanded ? "130px" : "230px"}`}
+        height={`${expanded ? "80px" : "230px"}`}
         image={MusicWeb}
         alt="Music"
       />
-      <CardContent sx={{ padding: "8px 24px 0 24px" }}>
+      <CardContent
+        sx={{ padding: `${expanded ? "0 24px 0 24px" : "8px 24px 0 24px"}` }}
+      >
         <Typography variant="body2" color="text.primary">
           musicPlayer프로젝트 입니다. Redux를 사용하여 음원 관련 스토어를
           생성하여 프로젝트를 제작하였으며 프로젝트에 사용된 이미지와 음원은

@@ -23,6 +23,16 @@ const ProjectContainer = styled.div`
       gap: 20px;
     }
   }
+  @media screen and (max-width: 768px) {
+    .project-center {
+      margin: 100px 0;
+    }
+  }
+  @media screen and (max-width: 365px) {
+    .project-center {
+      margin: 50px 0;
+    }
+  }
 `;
 
 export default function Project() {
