@@ -55,6 +55,28 @@ const Bg = styled.div`
     background-color: var(--main-white);
   }
 
+  @media screen and (max-width: 1200px) {
+    .top {
+      top: 25px;
+      right: 25px;
+    }
+    .right {
+      font-size: 18px;
+      margin: -6px -20px;
+    }
+    .bottom {
+      left: 25px;
+      bottom: 25px;
+    }
+    .left {
+      bottom: 25px;
+      left: 25px;
+    }
+    .top::after,
+    .bottom::after {
+      width: 70vw;
+    }
+  }
   @media screen and (max-width: 768px) {
     .top {
       top: 15px;

@@ -36,6 +36,7 @@ const StyledSlider = styled(Slider)`
     }
   }
   .slick-slide.slick-center {
+    z-index: 10;
     transform: scale(1);
     opacity: 1;
     transition: 0.5s;
@@ -46,6 +47,8 @@ const StyledSlider = styled(Slider)`
   }
 
   @media screen and (max-width: 1200px) {
+    .slick-slide {
+    }
     .slick-slide.slick-center {
       /* min-width: 400px; */
     }

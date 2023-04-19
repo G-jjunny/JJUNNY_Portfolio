@@ -54,9 +54,15 @@ function Education({ isToggle }) {
     >
       <Col>
         <h3 className="head">학력사항</h3>
-        <li>2017 부흥고등학교 졸업</li>
-        <li>2017 세명대학교 입학</li>
-        <li>2023 세명대학교 졸업</li>
+        <li>
+          <p>2017 부흥고등학교 졸업</p>
+        </li>
+        <li>
+          <p>2017 세명대학교 입학</p>
+        </li>
+        <li>
+          <p>2023 세명대학교 졸업</p>
+        </li>
       </Col>
     </Edu>
   );

@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import Image from "../images/jjunny.jpg";
+import Image from "../images/jjunny2.jpg";
 import Row from "../components/Row";
 import Education from "../components/Education";
 import Activity from "../components/Activity";
-import InfoTheme from "../components/InfoTheme";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { IconButton } from "@mui/material";
 import TechStack from "../components/TechStack";
-import TypingAnimation from "../hooks/TypingAnimation";
 
 const InfoContainer = styled.div`
   z-index: 2;
@@ -23,6 +20,7 @@ const InfoContainer = styled.div`
   padding: 0 50px;
   transition: 1s;
   opacity: ${({ isSecond }) => (isSecond ? "1" : "0")};
+  display: flex;
 
   .container {
     /* width: 100%;
@@ -89,6 +87,7 @@ const InfoContainer = styled.div`
       }
       .introduction {
         /* font-size: 18px; */
+        width: 70%;
         max-width: 750px;
         padding-top: 20px;
         font-weight: 700;
@@ -119,7 +118,7 @@ const InfoContainer = styled.div`
     width: 80px;
     height: 3px;
     bottom: -10px;
-    left: 85px;
+    right: 0;
   }
 
   @keyframes shake {
@@ -134,6 +133,53 @@ const InfoContainer = styled.div`
     }
     40% {
       transform: rotate(-15deg);
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    width: 80vw;
+    height: 80vh;
+    .container {
+      margin: auto 0;
+      .icon-group {
+        right: 20px;
+        top: 20px;
+      }
+      .name {
+        margin: 0 0 50px 0;
+        .face {
+          width: 150px;
+          height: 185px;
+        }
+        .t-group {
+          .introduction {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80vw;
+    height: 80vh;
+    padding: 0 30px;
+    .container {
+      .icon-group {
+        right: 15px;
+        top: 15px;
+      }
+      .name {
+        margin: 30px 0;
+        .face {
+          width: 140px;
+          height: 165px;
+        }
+        .t-group {
+          .introduction {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 `;
