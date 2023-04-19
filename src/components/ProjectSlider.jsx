@@ -67,7 +67,7 @@ export default class ProjectSlider extends Component {
       dots: false,
       arrows: false,
       slidesToScroll: 1,
-      // autoplay: true,
+      autoplay: true,
       autoplaySpeed: 3000,
       centerMode: true,
       className: "center",

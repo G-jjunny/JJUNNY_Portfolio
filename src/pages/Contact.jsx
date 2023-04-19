@@ -20,10 +20,10 @@ const StyledDiv = styled.div`
     .outTro {
       position: relative;
       max-width: 650px;
-      /* margin-bottom: 50px; */
+      padding-top: 20px;
       p {
         margin-bottom: 20px;
-        font-weight: 400;
+        font-weight: 500;
       }
       .bold {
         font-weight: 600;
@@ -40,6 +40,7 @@ const StyledDiv = styled.div`
       right: 0;
     }
     .contact {
+      margin-top: 50px;
       .icon-group {
         align-items: center;
         color: var(--main-white);
